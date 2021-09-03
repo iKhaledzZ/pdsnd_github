@@ -16,7 +16,7 @@ def get_filters():
         if city in ["chicago","new york city","washington", '\n \n']:
             break
         else:
-            print("Unknown, Enter a valid city: \n")
+            print("Unknown City, Enter a valid city: \n")
 
 
     # get user input for month (all, january, february, ... , june)
@@ -29,7 +29,7 @@ def get_filters():
             break
         else:
             print("wrong input, please try again \n")
-            
+
 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
@@ -134,7 +134,7 @@ def user_stats(df):
 
 
     # Display counts of gender
-    
+
     try:
         print("These are the genders on the data: \n \n %s"  % df['Gender'].value_counts())
     except KeyError:
@@ -148,13 +148,13 @@ def user_stats(df):
         print("The most common year of birth is %s \n \n" % df['Birth Year'].mode()[0])
     except KeyError:
         print("No data available for year of birth for the selected city")
-        
-        
+
+
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
     view_data = input("Would you like to view 5 rows of individual trip data? Enter yes or no?")
     view_data.lower()
     start_loc = 0
@@ -165,7 +165,7 @@ def user_stats(df):
         if view_display == 'no':
             break
 
-    
+
 def main():
     while True:
         city, month, day = get_filters()
