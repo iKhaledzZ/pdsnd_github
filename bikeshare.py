@@ -21,7 +21,7 @@ def get_filters():
 
     # get user input for month (all, january, february, ... , june)
     while True:
-        month = input("Please enter the month needed, or type all to apply no month filter \n")
+        month = input("Please enter the month needed, or type all to apply no month filter (SELECT ALL MONTHES) \n")
         month = month.lower()
         if month in ["all","january","february","march","april","may","june","july","august","september","october","november","december"]:
             if month != 'all':
